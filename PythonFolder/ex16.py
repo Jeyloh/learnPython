@@ -14,10 +14,11 @@ print "If you do want that, hit RETURN."
 raw_input("?")
 
 print "Opening the file..."
-target = open(filename, 'w') # lagrer "åpne filnavnet" i en variabel
-
-#print "Truncating the file. Goodbye!"
-#target.truncate() # sletter innholdet
+target = open(filename, 'w') # w er en modifier. 'w+' kan og brukes for å åpne filen i read og write mode
+# open alene åpner filen i read mode ('r' mode). 'w', 'r', 'a' og + versjoner av disse finnes
+.print "Truncating the file. Goodbye!"
+target.truncate() # sletter innholdet. Ikke nødvendig med bruk av 'w'.
+# Alle disse modifierne er deler av open() metoden. 
 
 print "Now I'm going to ask you for three lines"
 
